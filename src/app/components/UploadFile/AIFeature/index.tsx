@@ -4,7 +4,7 @@ import React from "react";
 const Aifeature = () => {
   return (
     <div className="w-[100%] bg-slate-200 h-[60vh] mt-5">
-      <h1 className="text-red-700 mt-10  p-2 text-3xl font-serif font-bold max-w-[300]  shadow-inner shadow-black  rounded-lg">
+      <h1 className="text-red-700 mt-10  p-2 text-3xl font-serif font-bold max-w-[300px]  shadow-inner shadow-black  rounded-lg">
         Our AI Chatbot
       </h1>
       <div className="flex justify-center items-center">
