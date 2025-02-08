@@ -3,7 +3,7 @@ import React from "react";
 const EmailNewslater = () => {
   return (
     <div className="w-[100%] bg-slate-200">
-      <h1 className="text-red-700 mt-10  p-2 text-3xl font-serif font-bold max-w-[300]  shadow-inner shadow-black  rounded-lg">
+      <h1 className="text-red-700 mt-10  p-2 text-3xl font-serif font-bold max-w-[300px]  shadow-inner shadow-black  rounded-lg">
         NewLetter
       </h1>
       <div className="w-[90%] max-sm:w-[100%] h-auto max-sm:h-[40vh] mt-10 mx-auto newslater_section p-5 border-none outline-none rounded-xl">
