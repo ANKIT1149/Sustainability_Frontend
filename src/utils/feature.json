@@ -1,0 +1,40 @@
+{
+  "features": [
+    {
+      "title": "AI-Powered Waste Identification",
+      "description": "Upload an image, and our AI instantly classifies it as recyclable, compostable, or general waste, helping you make informed disposal decisions.",
+       "redirects": "",
+       "buttontitle": "Check This"
+    },
+    {
+      "title": "Eco-Friendly  Recommendations",
+      "description": "Get AI-driven suggestions for sustainable alternatives to replace non-recyclable items, complete with pricing and purchase links.",
+      "redirects": "./product_page",
+      "buttontitle": "Explore This"
+    },
+    {
+      "title": "Nearest Recycling Center Locator",
+      "description": "Find the closest recycling center based on your location, making responsible waste disposal more convenient than ever.",
+      "redirects": "",
+      "buttontitle": "Explore Center"
+    },
+    {
+      "title": "Personalized Recycling Tips",
+      "description": "Receive tailored waste management tips and best practices to reduce waste and improve sustainability at home or work.",
+      "redirects": "",
+      "buttontitle": "Get Tips"
+    },
+    {
+      "title": "User-Friendly Dashboard & Insights",
+      "description": "Track your waste disposal habits, analyze recycling trends, and gain insights to make smarter, eco-conscious decisions.",
+      "redirects": "/profile",
+       "buttontitle": "Profile"
+    },
+    {
+      "title": "Eco",
+      "description": "Engage with a like-minded community, share progress, and earn rewards for consistent recycling and sustainable practices.",
+      "redirects": "/ai_feature",
+      "buttontitle": "Chat With AI"
+    }
+  ]
+}
