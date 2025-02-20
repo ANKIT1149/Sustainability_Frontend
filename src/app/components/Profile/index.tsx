@@ -67,7 +67,7 @@ const ProfilePage: React.FC = () => {
 
     userDetail();
     getEcoPoints();
-  }, []);
+  });
 
   const handleLogout = (e: { preventDefault: () => void }) => {
     e.preventDefault();

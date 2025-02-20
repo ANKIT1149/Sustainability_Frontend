@@ -26,7 +26,7 @@ const Navbar = () => {
     const interval = setInterval(checkExpiry, 5000)
     return () => clearInterval(interval)
 
-  }, [])
+  })
   return (
     <div className="flex justify-center items-center w-[100%] h-auto p-3 border-2 rounded-3xl">
       <nav className="navbar z-[2] shadow-inner shadow-black">
