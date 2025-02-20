@@ -212,11 +212,30 @@ background: linear-gradient(135deg, #667eea, #764ba2)
   transition: all;
   z-index: 25
 }
+
 .recycle_bg {
   background: linear-gradient(135deg, #d9f490, #7edcca);
   border-radius: 20px;
   transition: all;
   z-index: 25
+}
+
+.register_bg {
+  background: linear-gradient(135deg, #d9f490, #7edcca);
+  transition: all;
+  z-index: 25
+}
+
+.leader_bg {
+  background: linear-gradient(135deg, #cdeb07, #28494e);
+  transition: all;
+  z-index: 25
+}
+
+.leader_bg:hover{
+  background: transparent;
+  transition: all 0.8s;
+  cursor: pointer;
 }
 
 .aibot{
@@ -258,4 +277,44 @@ button:hover {
   border-radius: 20px;
   transition: all;
   z-index: 25
+}
+
+.file{
+  z-index: 40;
+}
+
+.form{
+  z-index: 40;
+}
+
+.profile-page_bg{
+  background-image: url(../assests/image4.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.animate_coin{
+  opacity: 1;
+  animation: animated_coin 8s 1
+}
+
+@keyframes animated_coin {
+  0%{
+    opacity: 1;
+    margin-top: 20px;
+  } 
+
+  50%{
+    opacity: 1;
+    margin-top: 5px;
+  }
+
+  100%{
+    opacity: 0;
+    bottom: 0
+  }
+}
+
+::-webkit-scrollbar{
+  display: none;
 }

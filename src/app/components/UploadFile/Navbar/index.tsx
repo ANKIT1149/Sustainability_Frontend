@@ -1,8 +1,32 @@
+"use client"
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import "../../../globals.css";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter()
+
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+    const expiryTime = localStorage.getItem("expiryTime")
+    
+    const checkExpiry = () => {
+      if (expiryTime && Date.now() > Number(expiryTime)) {
+        localStorage.removeItem("token")
+        localStorage.removeItem("expiryTime")
+      }
+
+      if (!token || !expiryTime) {
+        return router.push("/login")
+      }
+    }
+    
+    checkExpiry()
+    const interval = setInterval(checkExpiry, 5000)
+    return () => clearInterval(interval)
+
+  }, [])
   return (
     <div className="flex justify-center items-center w-[100%] h-auto p-3 border-2 rounded-3xl">
       <nav className="navbar z-[2] shadow-inner shadow-black">
@@ -24,6 +48,12 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/profile">Profile</Link>
+          </li>
+          <li>
+            <Link href="/report">Report Waste</Link>
+          </li>
+          <li>
+            <Link href="/leaderboard">Leaderboard</Link>
           </li>
         </ul>
         <div className="navbar-toggle">&#9776;</div>
