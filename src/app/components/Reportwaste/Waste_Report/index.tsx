@@ -177,11 +177,11 @@ const Waste_Report = () => {
         </button>
         {animateCoin && (
           <motion.div
-            key={animateCoin}
+            key="animatecoin"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: -100 }}
             exit={{ opacity: 0, y: -150 }}
-            transition={{ duration: 3, ease: "easeOut" }}
+            transition={{ duration: 2, ease: "easeOut" }}
             className="relative bottom-[100px] left-[20%] transform -translate-x-1/2 z-[50]" // Removed opacity-0
           >
             <Image

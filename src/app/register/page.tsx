@@ -28,7 +28,6 @@ const Registeration_Page = () => {
       if (response.status === 200) {
         toast.success("User registered successfully.PLease verify your email to log in");
         localStorage.setItem("email", user.email);
-        localStorage.setItem("id", response._id);
 
         setLoading(false);
         setError(false);
