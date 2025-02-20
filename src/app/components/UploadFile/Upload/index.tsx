@@ -25,7 +25,7 @@ const UploadPage: React.FC = () => {
     useState<boolean>(false);
   const [answer, setAnswer] = useState<AIanswer>();
   const [step, setStep] = useState(1);
-
+  
   const openPicker = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
       setImages(event.target.files[0]);
@@ -46,10 +46,11 @@ const UploadPage: React.FC = () => {
     setLoading(true);
     setButtonDisabled(true);
     try {
+      const token = localStorage.getItem("token");
       const response = await axios.post(
         "http://127.0.0.1:8000/upload",
         formdata,
-        { headers: { "Content-Type": "multipart/form-data" } }
+        { headers: { "Content-Type": "multipart/form-data", "Authorization": `Bearer ${token}` } }
       );
 
       setUpload(response.data);
@@ -140,7 +141,7 @@ const UploadPage: React.FC = () => {
             <div className="flex flex-col justify-center items-center">
               <h3 className="text-white mt-3 p-2 text-4xl font-serif font-bold  shadow-inner shadow-black  rounded-lg">
                 Waste-Type:{" "}
-                <span className="text-black capitalize">
+                <span className="text-white capitalize">
                   {upload.data.waste_type}
                 </span>
               </h3>
